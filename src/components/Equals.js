@@ -1,11 +1,6 @@
 import { useCalc, useCalcUpdate } from "../CalcContext";
 import { StyledButton } from "./styled-components/StyledButton";
-import { evaluate, format } from "mathjs";
-
-function parse(calc) {
-  let res = evaluate(calc);
-  return format(res, 4).toString();
-}
+import { evaluate } from "mathjs";
 
 const Equals = () => {
   const calc = useCalc();
@@ -15,7 +10,7 @@ const Equals = () => {
       <StyledButton
         id="equals"
         gridArea="equals"
-        onClick={() => updateCalc(parse(calc))}
+        onClick={() => updateCalc(evaluate(calc).toString())}
       >
         =
       </StyledButton>
