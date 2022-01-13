@@ -14,6 +14,7 @@ import Operators from "./components/Operator";
 import { Link } from "./components/styled-components/Link";
 import { FaGithub } from "react-icons/fa";
 import Title from "./components/Title";
+import { FlexContainer } from "./components/styled-components/FlexContainer";
 
 const numbers = [
   ["seven", "7"],
@@ -30,7 +31,7 @@ const numbers = [
 
 const operators = [
   ["divide", "/"],
-  ["multiply", "x"],
+  ["multiply", "*"],
   ["add", "+"],
 ];
 
@@ -49,7 +50,6 @@ function App() {
             {operators.map((op, i) => (
               <Operators operator={op} key={i} />
             ))}
-
             <Decimal />
             <Subtract />
             <Delete />
@@ -57,14 +57,16 @@ function App() {
             <Equals />
           </CalcContainer>
         </CalcProvider>
-        <Link
-          href="https://github.com/matiasruiz21"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <p>by mruiz</p>
-          <FaGithub />
-        </Link>
+        <FlexContainer>
+          <Link
+            href="https://github.com/matiasruiz21"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p>by mruiz</p>
+            <FaGithub />
+          </Link>
+        </FlexContainer>
       </Container>
     </>
   );

@@ -6,6 +6,8 @@ const StyledButton = styled.button`
   font-weight: 500;
   padding: 1rem;
   grid-area: ${({ gridArea }) => gridArea};
+  border-radius: 5px;
+  border-color: white;
   cursor: pointer;
 
   // Unselectable

@@ -14,11 +14,10 @@ const Flex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.25rem;
-
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
   h1 {
-    font-size: clamp(2rem, 2vw + 1rem, 5rem);
-    margin-right: 0.5rem;
+    font-size: clamp(1.5rem, 3vw + 1.25rem, 2.5rem);
   }
 `;
 export default Title;

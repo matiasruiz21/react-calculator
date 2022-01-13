@@ -4,6 +4,9 @@ import { StyledButton } from "./styled-components/StyledButton";
 function check(calc, simbol) {
   if (calc.slice(-1) === simbol || calc.length === 0) {
     return (calc += "");
+  } else if (calc.slice(-2) === "*-" && simbol === "+") {
+    // FFC valitation workaround
+    return calc.slice(0, calc.length - 2).concat(simbol);
   } else if (isNaN(parseFloat(calc.slice(-1)))) {
     return calc.slice(0, calc.length - 1).concat(simbol);
   } else if (calc.slice(-1) === "-") {

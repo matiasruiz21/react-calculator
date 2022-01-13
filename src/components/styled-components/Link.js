@@ -2,16 +2,13 @@ import styled from "styled-components";
 
 const Link = styled.a`
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 0.25rem;
   margin-top: 10px;
   color: white;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
-  }
-  p {
-    margin-right: 0.25rem;
   }
 `;
 
